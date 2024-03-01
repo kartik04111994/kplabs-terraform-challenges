@@ -1,17 +1,23 @@
-provider "aws" {
-  version = "~> 2.54"
-  region  = "us-east-1"
-  access_key = "AKIAIOSFODNN7EXAMPLE"
-  secret_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
-}
+/*provider "aws" {
 
-provider "digitalocean" {}
+ region = "us-east-1"
+}
 
 terraform {
-    required_version = "0.12.31"
+  required_providers {
+    digitalocean = {
+      source  = "digitalocean/digitalocean"
+      version = "~> 2.0"
+    }
+  }
+}
+
+terraform {
+ required_version = "1.3.7"
 }
 
 
-resource "aws_eip" "kplabs_app_ip" {
-  vpc      = true
+resource "aws_iam_user" "kplabs_app_ip" {
+     name = "kart"
 }
+*/
